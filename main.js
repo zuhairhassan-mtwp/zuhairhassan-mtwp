@@ -167,4 +167,3 @@ function is_prime(n)
     return true;
   }
 }
-© 2019 GitHub
