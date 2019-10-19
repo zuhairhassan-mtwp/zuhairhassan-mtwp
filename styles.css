@@ -43,7 +43,7 @@ input#first-number, input#last-number{
 section#score{
   position: absolute;
   top: 0;
-  right: 29vw;
+  right: 13vw;
   display: block;
   font-size: 2em;
   width: 15vw;
