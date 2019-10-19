@@ -1,7 +1,8 @@
 //mode is to decide what opperation is done on the two numbers//
-let mode = 'none';
+let mode = 'add';
 //get each button and creates events for them//
 let addButton = document.getElementById('addition');
+addButton.style.color = "lightgreen";
 addButton.addEventListener('click', (event) => {
   mode = 'add';
   addButton.style.color = "lightgreen";
@@ -166,3 +167,4 @@ function is_prime(n)
     return true;
   }
 }
+© 2019 GitHub
