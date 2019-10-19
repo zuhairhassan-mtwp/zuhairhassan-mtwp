@@ -43,7 +43,7 @@ input#first-number, input#last-number{
 section#score{
   position: absolute;
   top: 0;
-  right: 10vw;
+  right: 13vw;
   display: block;
   font-size: 2em;
   width: 15vw;
@@ -67,7 +67,12 @@ section#math button{
 input#r1-start, input#r1-end, input#r2-start, input#r2-end{
   font-size: 2em;
 }
+
 button#set-ranges {
   height: 3vh;
+  font-size: 1.5em;
+}
+
+ol > li {
   font-size: 1.5em;
 }
