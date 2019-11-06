@@ -45,31 +45,41 @@ function createRandNums(){
   //code for first randNum
   let r1First = document.getElementById("r1-start").value;
   let r1Second = document.getElementById("r1-end").value;
-  let r1newVal = Math.ceil(Math.random() * (r1Second - r1First) + r1First);
+  let r1newVal = Math.ceil(Math.random() * (r1Second - r1First + 1) + r1First);
+  if(r1newVal < r1First || r1newVal > r1Second){
+    while(r1newVal < r1First || r1newVal > r1Second){
+      r1newVal = Math.ceil(Math.random() * (r1Second - r1First + 1) + r1First);
+    }
+  }
   let r1destination = document.getElementById("first-number");
   r1destination.value = r1newVal;
   if(mode == 'division'){
     while(is_prime(r1destination.value) == true){
-      r1destination.value = Math.ceil(Math.random() * (r1Second - r1First) + r1First); 
+      r1destination.value = Math.ceil(Math.random() * (r1Second - r1First + 1) + r1First); 
     }
   }
   //code for second randNum  
   let first = document.getElementById("r2-start").value;
   let second = document.getElementById("r2-end").value;
-  let newVal = Math.ceil(Math.random() * (second - first) + first);
+  let newVal = Math.ceil(Math.random() * (second - first + 1) + first);
+  if(newVal < first || newVal > second){
+    while(newVal < first || newVal > second){
+      newVal = Math.ceil(Math.random() * (r1Second - r1First + 1) + r1First);
+    }
+  }
   let destination = document.getElementById("last-number");
   destination.value = newVal;
   let rand1 = document.getElementById("first-number").value;
   if(rand1 != ""){
     if(mode == 'subtract'){
       while(rand1 < newVal){
-        newVal = Math.ceil(Math.random() * (second - first) + first);
+        newVal = Math.ceil(Math.random() * (second - first + 1) + first);
         destination.value = newVal;
       }
     }
     if(mode == 'division'){
       while(rand1 % destination.value != 0){
-        destination.value = Math.ceil(Math.random() * (second - first) + first); 
+        destination.value = Math.ceil(Math.random() * (second - first + 1) + first); 
         }
       }
     }
